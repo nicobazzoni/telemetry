@@ -2,7 +2,7 @@ import React from 'react';
 
 const Lines = () => {
   return (
-    <div className="relative mt-4 h-screen w-full flex items-center justify-center bg-stone-50 overflow-hidden overflow-y-scroll">
+    <div className="relative mt-4 h-screen w-full flex items-center justify-center bg-stone-50 overflow-hidden ">
 
       {/* Background Circle */}
       <div className="hidden md:block h-screen w-full absolute border-2 mb-3 rounded-full border-rose-200 border-dotted animate-rotate z-0">
@@ -31,7 +31,7 @@ const Lines = () => {
         </div>
    
 
-        <a href="https://soundcloud.com/nicoroc/sets/telemetry" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-rose-200 underline">Listen on SoundCloud</a>
+        <a href="https://soundcloud.com/nicoroc/sets/telemetry" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-rose-200 underline-none">Listen on SoundCloud</a>
       </div>
 
     </div>
