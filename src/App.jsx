@@ -29,7 +29,7 @@ function App() {
       <Lines /> 
       <Bio />
       <Images />
-      <Lyrics />
+      {/* <Lyrics /> */}
       <Climate />
       < Footer />
      
