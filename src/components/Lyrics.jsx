@@ -1,37 +1,52 @@
 import React, { useState } from 'react';
 
-function Lyrics() {
-    const svgUrls = [
-        "src/assets/svg/untitled.svg",
-        "src/assets/svg/face.JPG",
-        // "src/assets/svg/song3.svg",
-        // ... add more SVG URLs as needed
-    ];
+// Sample songs data
+const songs = [
+  { title: "bandit", lyrics: "bandit, and my name is hot like its branded, bandit, bandit , one day i took off, i never landed, bandit bandit and i know that they cant stand it bandit bandit they dont want to see me on a bad day feeling like i am always in a different world, fading in and out of consciousness is the cold, pain will shutter through me i feel it in my bines save me from the NPC enemy army of clones , take me to the embassy subvert them under their nose , see through a doffernt light spectrum only percieve lines of code, have no mercy, i have a bone to pick with every person born gold laurel wreath that i adorn to an oath that i have sworn * chorus* eternal like platonic form breaking norm taking scorn the trial is never adjourned no matter how well you perform you'll be the one whose being moourned or forlorn youve forewarned in brooklyn ny i was born but im torn cuz they gentrified it and sojourned stole the name and now it;s worn no i will nev er conform call their music bathwater cux it's always luke warm everybody want to be king but it is a crown of thorns * chorus * Nothings but shadows Undulating Quiver of Arrows Hunter, waitingWent into the narrows Thunder, rainingSent into the gallows Under, fading   Fed em to the dragon Hunger, cravenMorphed into an agon young And stayed in I Wept in the forest A loner raven Cawed and flew away forlorn,laden Bandit damned and forsaken " },
+  { title: "go easy", lyrics: "Go easy, not really into politician, this ain’t DC, inhale, set sail when it’s breezy, she wants to see me sans bikini, in the sands of Santorini, off the wall like I’m removing graffiti ,Anywhere they atThat’s where its seedy grapes of wrath In the big apple life is peachy got in her my palm like a beach tree And anything I don’t know I tell her teach me Demon on my back  I’m bout move in  Bout to lose it Lotta movement  Hot around  the collar I tell ‘em cool it  Lifes been getting  2 me Like I’m cloned 2 hits from the bong Now im goneAnd if ever were in agreement Then you’re not wrong Im a paragon And im paranormal Run a marathon In a pair of thermalsvHow dare they try to put me through hurdles How they’re playing the courts Should concern you I do whatever I please Fluid on the high seas Cool like I was ices They fishy no pisces Knife to thieves End up with frost bite Trying to bite the freeze Im just visitor whose visiting I might just leave before it is to be revealed That I’m a nice mc Is he for real ? Well I just be Anywhere im at is a sight to. See They live spitefully   Going through life lifelessly No favors gotta  labor   If ya  strike with me   Headshot make em look like ice spices  Weave   Power in a secret  No telling what I  Might achieve Either they sold or burnout Turn out theres not a price for me " },  
+  { title: "ndrangeta", lyrics: "The way I slide in seizure Theyll think the gifs Julius Caesar   As I rise from the ether  Eyebrow look like Frida Tri angles like im a pita  On the edge that I teeter  They change their look like they’re kia But they got no idea  Whenever she around  My eyes light up like im raiden   We can make the bedrock Make it red hot like its satan When they see me They act  seedy   Could it be they’re  hating Come to their senses  Once the adrenaline start fading  Aim for the fences get restless  I guess its brazen  go from playing to praying I prey on em   And plague em +++++++I don’t want in your circle I am Not an avatar Just tin men lion Cowards who don’t have a heart Mother of pearl cutlery Ricotta basil caviar Brushing off stars   Got bars like a patty cars Metalic on the beat til im Ulrich  guess you could call me lars  No emotion from meIm an not an emoticon And the way the money always staying Like I sowed it on get defanged like a cobras karma they don't have a code of honor  " },
+  { title: "possessed", lyrics: " dead men in my wallet like its it's Possessed Overheard A sweetie birdie tweeting Im impressed Flames around me They surround me Like I am karesh I'm trying to tell her that I’m interstellar I possess The way to get her in the bed and then ill slide up her dress Im possessed That means you have me Are you happy You  kidnapped me I confess Im possessed lie on your breasts  Nigh lie or regress  Man of letters EMS  If you reply to your x Under your spell can you tell My eyes are  Spiral  vortex You got me hypnotized im mystified In infinite jest Im in the sky they criticize Couldnt care less * feel like  a felon in a cell  or I fell in a cellar s tragic without her magic    I’ll pick up my penn & teller She’ll feel my words like Hellen Keller I don’t got a bridge to seller  But if we’re on the same plane   ill propel her  Paradise in Paris nights Le Accountrments	They all say the same thing Its just they change the font They’re soft as a croissant  On the fence Then save your breath Cuz I have different intentions and it is unto the death Like a posse of apostrophes I’m probably possessed A poltergeist A cobras eyescold as ice Now no ones left Its no surprisedexpose their lies Like cobra kai I get a kick an’t shoulder any of the burden Theres no space with all those chipsYou know the drill  Can’t screw around with you nutsos  even a bit Im possessedthat mean you have me You’ve kidnapped me are  you happy ." },
+  { title: "close", lyrics: "Cloaked in daggers Poised in Irony Draped in hatred And poison ivy  Lost my way again   No one come find me Couldn’t move forward Til I put it all behind me made a career to grind gear Don’t what you mean ?we only smoking kind here Tailor made   Trail blazed  wherever I steer  They’re afraid They’ll evade wherever I appear Tear away the fabric of space and time stare  Into the heart of the eternity  That lies there The wool pulled over there eyes  Just happen to coincide  Resentment was moralized They spread more lies there   My  ATTITUDE connotes a sneer I pioneered this higher tier AT AN ALTITUDE THAT no one flying near FLASHING. At de beirs Over ration commandeer  Our passion will appear   unlaTCHING HER BRASSIERE There too tepid I am turning up the temperature  There’s dipping their toes with their bros this aint a pedicure They said there was in the know But they never were She has no clothes onSo I call her the emperor And if she gets too salty I will pepper herI never err Im always in the spot but theyre never there Flow like there is a god  Invading like the  Visigoth The  debate is it the Draco or kalishnikov Piss me off Hang em like their Jesus  on a christians cross Energy im giving off they’re living off its sustenance If they finally found the truththey’d have to dust it for my prints But I always stick and moveLike I am removing lint they still aint made a dent They’re hating aint repent They’re caving   they aint made a cent They’re behaving Like they’re cavemen Face timed with her  She turned into a cam girl  Spending time I got the bill Hand you the damn world Spin it the other way  If you don’t like the way it turn My cpu a dell set fire to the rain and watch it Burn They’re taking me for a joke  Iike im in between two ferns After it is my turn they tend to turn taciturn Gotta get cremated if you wanna know how I urn Cuz the way I make it look  its like I never had a germ She got me in with a plus one Giving into her seduction Head  plus I smashed I call that a concussion Anything im cut from customPlus im  Taking my BALLS  I clutch them . " },
+  { title: "dark chamber", lyrics: "Whatever I suffice It will not be a fuck Chain covered in ice   Like a hockey puck   Whatever they keep  it Will not be buck Born blessed I do not    luck  Locheed stuff  Rocky tough Im the op Whatever they got   it will not be enough  I’m in the sauce like marinara They can’t walk in my airs Im from New York So Im aware that The Chicago bear there won’t be much to spare Fire and smoke like a flare  Take Anything that they could scare They’re popping pills just to prepare Have an affair With  the au pair Upstairs She austere  Had a scare She smudge her mascara We walked out the club for some air Wasn’t much for us there  Took me to her pie deter ‘ Showed me of just how much I was unaware They had the intel But  you could tell That they did nothing with it The flow incel  Cuz no way in hell They’re fucking with It  Don’t matter if there gonna admit I tThe flow so hotI gotta oven mit it But its also sick Ive become a medic She’s like come and get it We become kinetic Lightning reign down like odin Russian  Like I am  proghozin Drinking a latte frozen Cuz coffees are just for closing All you bitches is coven Don’t know the depths I’ve dove in The  Only point of pointing at me Is pointing out that im chosen The prose that im composing Come from a compulsion Talk wreckless in convulsions	Skull necklace lke  im dahlsimBefore I let em blitz Turn into A furnace first  apocalypse nowI am cornel Kurtz INCUR THE CURSE I prefer the perks I deter these jerks Ferrari on a safari pet Leopardand a campari Bodyguards are from Bari Any wave  im on gnarly Any street im on ghetto But yet the mood is still mellow  Stealing  her will to settle While she is still in stilettoesHad her at hello WE MADE LOVE IN A MEADOW Ill pull their card like a tarot Quiver never outta arrowsThe road less travelled is narrowAbreast with perilno egress All I can take is a deep breath They was trying to mach the one Had to tell em cool their  jets Im cueing up your queen Like I mixed up pool with chess Life is just a game The reaper always calling next make sure i get the win nowi see to itlike twin clownsRoof missing like its been found I see them with waterBut tell me what else Will they carry How could they see meI’m a visionary Whose seen the light insidethe singularity Not even judge from blood meridianCould touch the grudge im getting in Im like the riddler on ridolin Anything I touch I crush My gravity field is too much they can’t get rid of him They super sweet They’re sugur cinnamon And other synonyms   All I that is utter evidence no one a mountain to me I am everest " }
+];
 
-    const [currentSongIndex, setCurrentSongIndex] = useState(0);
+// Modal Component
+const LyricsModal = ({ song, onClose }) => (
+  <div className='p-3' style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>
+  
+    <h2>{song.title}</h2>
+    <p>{song.lyrics}</p>
+    <button onClick={onClose}>Close</button>
+  </div>
+);
 
-    const handleTap = () => {
-        if (currentSongIndex < svgUrls.length - 1) {
-            setCurrentSongIndex(prevIndex => prevIndex + 1);
-        } else {
-            setCurrentSongIndex(0);  // wrap back to the first song
-        }
-    }
+// Main Component
+function LyricsApp() {
+  const [currentSong, setCurrentSong] = useState(null);
 
-    return (
-        <div className="flex relative flex-col items-center justify-center h-screen" onClick={handleTap} style={{ cursor: 'pointer' }}>
-            <p>Tap to view next song</p>
-            <div className=' flex right-2
-             items-center justify-center w-full h-full'>
-                <iframe 
-                    src={svgUrls[currentSongIndex]} 
-                    width='100%'
-                    height="800" 
-                    allow="autoplay">
-                </iframe>
-            </div>
-        </div>
-    );
+  const handleSongClick = song => {
+    setCurrentSong(song);
+  };
+
+  const handleCloseModal = () => {
+    setCurrentSong(null);
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+         <h4 className='border rounded-md shadow-sm p-2 bg-stone-100 border-slate-100 '>lyrics</h4>
+      {songs.map(song => (
+        <button className='border rounded-full shadow-sm p-2 border-slate-100 '
+          key={song.title} 
+          style={{ margin: '10px' }}
+          onClick={() => handleSongClick(song)}
+        >
+          {song.title}
+        </button>
+      ))}
+      {currentSong && <LyricsModal song={currentSong} onClose={handleCloseModal} />}
+    </div>
+  );
 }
 
-export default Lyrics;
+export default LyricsApp;
